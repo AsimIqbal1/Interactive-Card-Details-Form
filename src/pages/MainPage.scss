@@ -1,0 +1,187 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    .left-panel {
+        width: 30%;
+        background-image: url('../assets/images/bg-main-desktop.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100%;
+        position: relative;
+        color: var(--white);
+
+        .cards {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 100%;
+
+            .card-image {
+                width: 30vw;
+            }
+
+            .front-card {
+                position: relative;
+                transform: translateX(-25%);
+
+                .card-info-container {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    padding: 1.5rem 1.8rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .card-logo {
+                        flex-grow: 1.2
+                    }
+
+                    .card-content {
+                        flex-grow: 0.4;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .card-number {
+                            font-size: clamp(0.6rem, 1.7vw, 1.5rem);
+                            word-spacing: 0.2vw;
+                            letter-spacing: 2px;
+                        }
+
+                        .card-details {
+                            display: flex;
+                            justify-content: space-between;
+                            font-size: clamp(0.3rem, 1.1vw, 1rem);
+
+                            .card-holder-name {
+                                text-transform: uppercase;
+                            }
+                        }
+
+
+                    }
+
+                }
+
+
+            }
+
+            .back-card {
+                position: relative;
+
+                .cvv {
+                    position: absolute;
+                    font-size: clamp(0.1rem, 1.5vw, 1.3rem);
+                    top: 42%;
+                    right: 15%;
+                }
+            }
+
+
+        }
+    }
+
+    .interactive-section {
+        display: flex;
+        flex-direction: column;
+        width: 26%;
+        margin-left: 25%;
+
+    }
+
+    .form-container {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .input-container {
+            box-sizing: border-box;
+            width: 100%;
+
+            .input-heading {
+                font-size: clamp(0.3rem, 1vw, 1rem);
+                text-transform: uppercase;
+                color: var(--darkGrayishViolet);
+                margin-bottom: 0.2rem;
+            }
+
+            .inputbox {
+                width: 100%;
+                border: 1px solid var(--lightGrayishViolet);
+                height: clamp(1.7rem, 3vw, 2.5rem);
+                padding: 0rem 0.5rem;
+                border-radius: 0.5rem;
+
+            }
+
+            .error {
+                border: 1px solid var(--red);
+            }
+
+            .inputbox::placeholder {
+                font-size: clamp(0.3rem, 1vw, 1rem);
+                color: var(--lightGrayishViolet)
+            }
+
+            .inputbox:focus {
+                border-color: var(--purple) !important;
+            }
+
+
+            .dates-container {
+                .dates-input-container {
+                    display: flex;
+                    gap: 0.2rem;
+                }
+            }
+
+            .error-message {
+                font-size: clamp(0.3rem, 1vw, 1rem);
+                margin-top: 4px;
+                color: var(--red)
+            }
+        }
+
+        .row-direction {
+            display: flex;
+            gap: 0.8rem
+        }
+    }
+
+    .button {
+        width: 100%;
+        background-color: var(--veryDarkViolet);
+        color: var(--white);
+        height: clamp(1.8rem, 3.5vw, 2.7rem);
+        font-size: clamp(0.5rem, 1.4vw, 1rem);
+        border: none;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .complete-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        .greetings {
+            font-size: 2rem;
+            color: var(--veryDarkViolet);
+        }
+
+        .info-text {
+            color: var(--darkGrayishViolet);
+        }
+    }
+}

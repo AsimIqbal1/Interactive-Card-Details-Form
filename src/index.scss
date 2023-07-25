@@ -1,0 +1,15 @@
+* {
+  font-family: 'custom-regular';
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+}
+
+@font-face {
+  font-family: 'custom-regular';
+  src: local('MyFont'), url(./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
