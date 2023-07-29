@@ -1,15 +1,15 @@
 .container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
+    height: 100svh;
+    width: 100vw;
 
     .left-panel {
         width: 30%;
+        height: 100vh;
         background-image: url('../assets/images/bg-main-desktop.png');
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        min-height: 100%;
         position: relative;
         color: var(--white);
 
@@ -51,7 +51,7 @@
                         justify-content: space-between;
 
                         .card-number {
-                            font-size: clamp(0.6rem, 1.7vw, 1.5rem);
+                            font-size: clamp(1rem, 1.7vw, 1.5rem);
                             word-spacing: 0.2vw;
                             letter-spacing: 2px;
                         }
@@ -59,7 +59,7 @@
                         .card-details {
                             display: flex;
                             justify-content: space-between;
-                            font-size: clamp(0.3rem, 1.1vw, 1rem);
+                            font-size: clamp(0.7rem, 1.1vw, 1rem);
 
                             .card-holder-name {
                                 text-transform: uppercase;
@@ -70,8 +70,6 @@
                     }
 
                 }
-
-
             }
 
             .back-card {
@@ -79,13 +77,11 @@
 
                 .cvv {
                     position: absolute;
-                    font-size: clamp(0.1rem, 1.5vw, 1.3rem);
+                    font-size: clamp(1rem, 1.5vw, 1.3rem);
                     top: 42%;
                     right: 15%;
                 }
             }
-
-
         }
     }
 
@@ -94,32 +90,30 @@
         flex-direction: column;
         width: 26%;
         margin-left: 25%;
-
     }
 
     .form-container {
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
 
         .input-container {
             box-sizing: border-box;
             width: 100%;
 
             .input-heading {
-                font-size: clamp(0.3rem, 1vw, 1rem);
+                font-size: clamp(1rem, 1vw, 1.2rem);
                 text-transform: uppercase;
-                color: var(--darkGrayishViolet);
+                color: var(--veryDarkViolet);
                 margin-bottom: 0.2rem;
             }
 
             .inputbox {
                 width: 100%;
                 border: 1px solid var(--lightGrayishViolet);
-                height: clamp(1.7rem, 3vw, 2.5rem);
+                height: 2.7rem;
                 padding: 0rem 0.5rem;
                 border-radius: 0.5rem;
-
             }
 
             .error {
@@ -127,7 +121,7 @@
             }
 
             .inputbox::placeholder {
-                font-size: clamp(0.3rem, 1vw, 1rem);
+                font-size: clamp(1rem, 1vw, 1.2rem);
                 color: var(--lightGrayishViolet)
             }
 
@@ -144,7 +138,7 @@
             }
 
             .error-message {
-                font-size: clamp(0.3rem, 1vw, 1rem);
+                font-size: clamp(1rem, 1vw, 1.2rem);
                 margin-top: 4px;
                 color: var(--red)
             }
@@ -160,8 +154,8 @@
         width: 100%;
         background-color: var(--veryDarkViolet);
         color: var(--white);
-        height: clamp(1.8rem, 3.5vw, 2.7rem);
-        font-size: clamp(0.5rem, 1.4vw, 1rem);
+        height: 2.7rem;
+        font-size: clamp(1rem, 1vw, 1.2rem);
         border: none;
         border-radius: 0.5rem;
         margin-top: 1rem;
@@ -182,6 +176,49 @@
 
         .info-text {
             color: var(--darkGrayishViolet);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        overflow: scroll;
+
+        .left-panel {
+            width: 100%;
+            height: 30vh;
+            background-image: url('../assets/images/bg-main-mobile.png');
+
+            .cards {
+                top: 55%;
+                left: 60%;
+                gap: 1rem;
+                flex-direction: column-reverse;
+                transform: translate(-50%, -50%);
+
+                .card-image {
+                    width: 70vw;
+                }
+
+                .front-card {
+                    transform: translate(-25%, -15%);
+                }
+
+                .back-card {
+                    transform: translateY(40%);
+                    z-index: -1;
+                }
+
+            }
+        }
+
+        .interactive-section {
+            width: 90%;
+            margin-left: unset;
+            margin-top: 25%;
+            padding-bottom: 2rem;
         }
     }
 }
